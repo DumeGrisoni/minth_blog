@@ -5,10 +5,7 @@ interface HeaderProps {
   text: string;
 }
 
-const Header: FC<HeaderProps> = ({ title, text }: HeaderProps) => {
-  title = 'Minth Blog';
-  text = "Blog sur l'avancement des projets personnels";
-
+const Header: FC<HeaderProps> = ({ title, text }) => {
   return (
     <div className="flex justify-center items-center mt-11 text-myblack flex-col">
       <h1 className="text-6xl font-serif">{title}</h1>

@@ -5,7 +5,10 @@ function Home() {
   return (
     <div>
       <h1 className="text-7xl">
-        <Header />
+        <Header
+          text="Application Next regroupant les differentes application que j'ai créé."
+          title="Minth Blog"
+        />
       </h1>
     </div>
   );
