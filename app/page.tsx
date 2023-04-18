@@ -1,9 +1,12 @@
+import Header from '@/components/Header';
 import React from 'react';
 
 function Home() {
   return (
     <div>
-      <h1 className="text-7xl">Blog</h1>
+      <h1 className="text-7xl">
+        <Header />
+      </h1>
     </div>
   );
 }
