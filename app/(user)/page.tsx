@@ -1,4 +1,6 @@
+import { previewData } from 'next/headers';
 import Header from '@/components/Header';
+import PreviewSuspense from '@/components/PreviewSuspense';
 import React from 'react';
 
 export const metadata = {
@@ -7,7 +9,15 @@ export const metadata = {
     'Page principale du blog affichant les articles les plus récents explicant le workflow utilisé pour la création de mes sites utilisant next, javascript, react, tailwind et CSS.',
 };
 
-function Home() {
+export default function Home() {
+  if (previewData()) {
+    return (
+      <div>
+        <Header text="Preview des articles." title="Minth Blog" />
+      </div>
+    );
+  }
+
   return (
     <div>
       <Header
@@ -17,5 +27,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
