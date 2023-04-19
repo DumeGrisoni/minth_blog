@@ -19,8 +19,11 @@ export default function Navbar() {
         <Link href="/" className="hover:text-mybluehover transition px-5">
           Acceuil
         </Link>
-        <Link href="/about" className="hover:text-mybluehover transition px-5">
+        <Link href="/studio" className="hover:text-mybluehover transition px-5">
           Publier
+        </Link>
+        <Link href="/about" className="hover:text-mybluehover transition px-5">
+          A Propos
         </Link>
       </div>
 
