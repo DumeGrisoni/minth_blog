@@ -8,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body>
+      <body className="bg-mywhite">
         <Navbar />
         {children}
       </body>
