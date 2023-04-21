@@ -4,10 +4,7 @@ import React from 'react';
 import { groq } from 'next-sanity';
 import { sanityClient } from '@/lib/sanity.client';
 import { PreviewSuspense } from 'next-sanity/preview';
-import PreviewPost from '@/components/PreviewPost';
 import PostList from '@/components/PostList';
-
-const query = groq`*[_type == "post"] {..., author ->,categories[]->} | order(_createdAt desc)`;
 
 export const metadata = {
   title: "Page d'accueil",
@@ -15,7 +12,17 @@ export const metadata = {
     'Page principale du blog affichant les articles les plus récents explicant le workflow utilisé pour la création de mes sites utilisant next, javascript, react, tailwind et CSS.',
 };
 
+const getPosts = async () => {
+  const query = groq`*[_type == "post"]{..., author ->,categories[]->} | order(_id)`;
+  const posts = await sanityClient.fetch(query, {
+    cache: 'force-cache',
+  });
+
+  return posts;
+};
+
 export default async function Home() {
+  const posts = await getPosts();
   if (previewData()) {
     return (
       <PreviewSuspense
@@ -26,12 +33,10 @@ export default async function Home() {
           </div>
         }
       >
-        <PreviewPost query={query} />
+        aa
       </PreviewSuspense>
     );
   }
-
-  const posts = await sanityClient.fetch(query);
 
   return (
     <div>

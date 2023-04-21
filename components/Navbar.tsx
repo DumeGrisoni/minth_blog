@@ -5,18 +5,25 @@ import gitLogo from '../public/git_icon.svg';
 
 export default function Navbar() {
   return (
-    <nav className="bg-myblack px-10 w-full flex justify-between items-center text-mywhite font-sans sticky ">
-      <Link href="/">
+    <nav className="bg-myblack w-full flex justify-between items-center text-mywhite font-sans sticky px-2 md:px-4 lg:px-8 h-[50px] ">
+      <Link href="/" className="flex justify-center items-center">
         <Image
           src={minthLogo}
           alt="Logo de l'application"
           height={50}
           width={50}
+          className=" md:hidden"
         />
+        <p className="font-serif text-xl hover:text-mybluehover transition hidden md:block">
+          Minth Blog
+        </p>
       </Link>
 
-      <div className="flex justify-between items-center">
-        <Link href="/" className="hover:text-mybluehover transition px-5">
+      <div className="flex justify-between items-center ">
+        <Link
+          href="/"
+          className="hover:text-mybluehover transition px-5 hidden md:block "
+        >
           Acceuil
         </Link>
         <Link href="/studio" className="hover:text-mybluehover transition px-5">
@@ -38,7 +45,7 @@ export default function Navbar() {
           alt="Logo de Github"
           className="mr-2"
         />
-        <p>Github</p>
+        <p className="hidden md:block">Github</p>
       </Link>
     </nav>
   );
