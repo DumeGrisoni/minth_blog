@@ -14,9 +14,7 @@ export const metadata = {
 
 const getPosts = async () => {
   const query = groq`*[_type == "post"]{..., author ->,categories[]->} | order(_id)`;
-  const posts = await sanityClient.fetch(query, {
-    cache: 'force-cache',
-  });
+  const posts = await sanityClient.fetch(query);
 
   return posts;
 };
@@ -33,7 +31,7 @@ export default async function Home() {
           </div>
         }
       >
-        aa
+        Preview
       </PreviewSuspense>
     );
   }
