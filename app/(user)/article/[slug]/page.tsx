@@ -7,6 +7,10 @@ import urlFor from '@/lib/urlFor';
 import { PortableText } from '@portabletext/react';
 import { TextComponent } from '@/components/TextComponent';
 
+export const metadata = {
+  title: `Minth Blog - Page d'article`,
+  description: `Article du blog Minth Blog`,
+};
 type Props = {
   params: {
     slug: string;

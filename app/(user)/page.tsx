@@ -7,7 +7,7 @@ import { PreviewSuspense } from 'next-sanity/preview';
 import PostList from '@/components/PostList';
 
 export const metadata = {
-  title: "Page d'accueil",
+  title: "Minth Blog - Page d'accueil",
   description:
     'Page principale du blog affichant les articles les plus récents explicant le workflow utilisé pour la création de mes sites utilisant next, javascript, react, tailwind et CSS.',
 };
