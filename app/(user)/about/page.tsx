@@ -34,7 +34,7 @@ const About = () => {
         </p>
       </section>
       <hr className="w-[80%] border border-myblack mt-10" />
-      <section>
+      <section className="mb-10">
         <h4 className="mt-10 font-serif text-2xl font-bold text-center mb-4">
           Un résumé de mon parcours
         </h4>
@@ -45,10 +45,69 @@ const About = () => {
             l&apos;Hôtellerie-Restauration à Bastia (Haute-Corse)
           </li>
           <li className="mb-2">
-            <b>2012 - 2014 :</b> BTS Hôtellerie-Restauration Option Art de la
+            <b>2012 - 2015 :</b> BTS Hôtellerie-Restauration Option Art de la
             table en alternance à Marseille
           </li>
+          <li className="mb-2">
+            <b>2020 - 2021 :</b> Formation Graduate developpeur web et web
+            mobile fullstack chez Studi (parcours en ilgne d&apos;une année)
+          </li>
         </ol>
+        <h5 className="font-semibold font-serif text-xl mt-2">
+          Competences aquises :
+        </h5>
+        <ul className="mt-2 italic">
+          <li className="mb-2">- Le travail en équipe</li>
+          <li className="mb-2">- La gestion du temps</li>
+          <li className="mb-2">- L&apos;organisation</li>
+          <li className="mb-2">- La resolution de problemes</li>
+          <li className="mb-2">- Les languages Javascript, PHP(symfonny)</li>
+          <li className="mb-2">- Le frameworks React.js et Next.js</li>
+          <li className="mb-2">
+            - Le CSS en général et par differentes librairies (Tailwind,
+            Bootstrap, Styled-components, SASS...)
+          </li>
+        </ul>
+      </section>
+      <hr className="w-[80%] border border-myblack mt-10" />
+      <section className="mb-10">
+        <div>
+          <h4 className="mt-10 font-serif text-2xl font-bold text-center mb-4">
+            Me contacter
+          </h4>
+          <ul className="mt-2">
+            <li className="mb-2  font-semibold text-lg">
+              E-Mail:{' '}
+              <a
+                href={`mailto:dominique.grisoni@gmail.com`}
+                target="_blank"
+                className="font-normal text-myblue hover:underline"
+              >
+                Ici
+              </a>
+            </li>
+            <li className="mb-2  font-semibold text-lg">
+              LinkedIn:{' '}
+              <a
+                className="font-normal text-myblue hover:underline"
+                href="https://www.linkedin.com/in/dominique-grisoni-6384a721b/"
+                target="_blank"
+              >
+                Dominique Grisoni
+              </a>
+            </li>
+            <li className="mb-2  font-semibold text-lg">
+              GitHub:{' '}
+              <a
+                className="font-normal text-myblue hover:underline"
+                href="https://github.com/DumeGrisoni"
+                target="_blank"
+              >
+                DumeGrisoni
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </div>
   );
